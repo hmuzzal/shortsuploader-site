@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShortsUploader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <strong>ShortsUploader</strong>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>ShortsUploader</h1>
+    <p class="muted">A private, single-user upload tool for short videos.</p>
+
+    <h2>What it is</h2>
+    <p>
+      ShortsUploader is a Windows console application that its developer runs on their own computer.
+      It uploads the developer's own original short videos to the developer's own YouTube channel
+      and Facebook Page. It is not a public service: it has no sign-up, no hosted interface and no
+      users other than its developer.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      The developer places a finished video file and a small text file containing the title and
+      description into a local folder. On a schedule, the application uploads each video, records
+      the result in a local log file, and moves the files to a "posted" or "failed" folder.
+    </p>
+
+    <h2>Use of YouTube API Services</h2>
+    <p>
+      ShortsUploader uses <strong>YouTube API Services</strong> (the YouTube Data API v3) to upload
+      videos to the developer's own channel. It asks for the minimum access it needs: permission to
+      upload videos, and read-only access used once to confirm which channel was authorized.
+      It does not read, display, analyze or store any other YouTube data.
+    </p>
+    <p>
+      By using ShortsUploader, the user agrees to be bound by the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+      See our <a href="privacy.html">Privacy Policy</a> for what data is handled and how to revoke
+      access, and our <a href="terms.html">Terms of Service</a>.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href="mailto:hmuzzal.diu@gmail.com">hmuzzal.diu@gmail.com</a></p>
+  </main>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> ·
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+  </footer>
+</body>
+</html>

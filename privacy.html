@@ -18,11 +18,12 @@
 
   <main>
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: October 9, 2026</p>
+    <p class="muted">Last updated: October 23, 2026</p>
 
     <p>
       ShortsUploader is a private Windows console application used only by its developer to upload
-      the developer's own videos to the developer's own YouTube channel and Facebook Page. This
+      the developer's own videos to the developer's own YouTube channel, Facebook Page, Instagram
+      account and TikTok account. This
       policy explains what data the application accesses, stores and shares.
     </p>
 
@@ -49,8 +50,8 @@
 
     <h2>Information the application stores</h2>
     <ul>
-      <li><strong>OAuth tokens</strong> issued by Google, stored in a file on the user's own computer so the user does not have to sign in on every run.</li>
-      <li><strong>A local log file</strong> listing each uploaded file name, the date and time, and the video ID returned by YouTube.</li>
+      <li><strong>OAuth tokens</strong> issued by Google and TikTok, and the Meta Page access token, stored in files on the user's own computer so the user does not have to sign in on every run.</li>
+      <li><strong>A local log file</strong> listing each uploaded file name, the date and time, and the video or post ID returned by each platform.</li>
     </ul>
     <p>
       This data never leaves the user's computer. ShortsUploader has no server, no database, no
@@ -60,25 +61,50 @@
 
     <h2>How information is used and shared</h2>
     <p>
-      Stored tokens are used only to send the user's upload requests to YouTube. No information is
-      sold, transferred or disclosed to any third party. Video content and its metadata are sent
-      only to the platforms the user chose to publish to (YouTube and Facebook).
+      Stored tokens are used only to send the user's upload requests to the platform that issued
+      them. No information is sold, transferred or disclosed to any third party. Video content and
+      its metadata are sent only to the platforms the user chose to publish to (YouTube, Facebook,
+      Instagram and TikTok).
     </p>
 
     <h2>Revoking access and deleting data</h2>
     <ul>
       <li><strong>Revoke access:</strong> remove ShortsUploader at any time from the Google security settings page at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>. The application can no longer act on the account once access is revoked.</li>
-      <li><strong>Delete stored data:</strong> delete the <code>youtube-token</code> folder and the <code>upload-log.txt</code> file from the application's folder. This removes all data the application has stored. Nothing is held anywhere else.</li>
+      <li><strong>Revoke TikTok access:</strong> in the TikTok app open Settings and privacy &rarr; Security &rarr; Manage app permissions and remove ShortsUploader.</li>
+      <li><strong>Revoke Facebook and Instagram access:</strong> remove ShortsUploader under Facebook Settings &rarr; Business integrations.</li>
+      <li><strong>Delete stored data:</strong> delete the <code>youtube-token</code> and <code>tiktok-token</code> folders, the tokens in the configuration file, and the <code>upload-log.txt</code> file from the application's folder. This removes all data the application has stored. Nothing is held anywhere else.</li>
     </ul>
     <p>
       Stored authorization tokens are deleted when access is revoked or when the token folder is
       removed. The application stores no other YouTube API data, so there is nothing further to refresh or delete.
     </p>
 
-    <h2>Facebook</h2>
+    <h2>Facebook and Instagram</h2>
     <p>
-      The application also posts the same videos to the developer's own Facebook Page using a Page
-      access token stored in a local configuration file. It reads no Facebook user data.
+      The application also posts the same videos to the developer's own Facebook Page and to the
+      Instagram professional account linked to that Page, using a Page access token stored in a
+      local configuration file (permissions <code>pages_manage_posts</code>,
+      <code>instagram_basic</code> and <code>instagram_content_publish</code>). It reads only the
+      IDs needed to publish and the link of the published post. It reads no Facebook or Instagram
+      user data.
+    </p>
+
+    <h2>TikTok</h2>
+    <p>
+      The application sends the same videos to the developer's own TikTok account using the TikTok
+      Content Posting API. The developer signs in through TikTok Login Kit and grants these
+      permissions:
+    </p>
+    <ul>
+      <li><code>user.info.basic</code>: reads the account's display name and open ID once, to confirm which account was authorized;</li>
+      <li><code>video.upload</code>: uploads the video to the account's TikTok inbox as a draft, which the account owner finishes and posts in the TikTok app;</li>
+      <li><code>video.publish</code> (only when direct posting is turned on): posts the video to the account with the caption and privacy level the account owner chose.</li>
+    </ul>
+    <p>
+      The TikTok access and refresh tokens are stored only on the user's own computer. The
+      application does not read videos, followers, comments, messages or any other TikTok data, and
+      shares nothing with third parties. TikTok's handling of data is described in the
+      <a href="https://www.tiktok.com/legal/privacy-policy">TikTok Privacy Policy</a>.
     </p>
 
     <h2>Children's privacy</h2>

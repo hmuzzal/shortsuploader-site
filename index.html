@@ -23,8 +23,8 @@
     <h2>What it is</h2>
     <p>
       ShortsUploader is a Windows console application that its developer runs on their own computer.
-      It uploads the developer's own original short videos to the developer's own YouTube channel
-      and Facebook Page. It is not a public service: it has no sign-up, no hosted interface and no
+      It uploads the developer's own original short videos to the developer's own YouTube channel,
+      Facebook Page, Instagram account and TikTok account. It is not a public service: it has no sign-up, no hosted interface and no
       users other than its developer.
     </p>
 
@@ -47,6 +47,16 @@
       <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
       See our <a href="privacy.html">Privacy Policy</a> for what data is handled and how to revoke
       access, and our <a href="terms.html">Terms of Service</a>.
+    </p>
+
+    <h2>Instagram and TikTok</h2>
+    <p>
+      Videos are posted to the developer's own Instagram professional account through the
+      Instagram Graph API, and sent to the developer's own TikTok account through the TikTok
+      Content Posting API. The developer signs in with TikTok Login Kit and grants the
+      <code>user.info.basic</code> and <code>video.upload</code> permissions (and
+      <code>video.publish</code> when direct posting is turned on). Each video is uploaded with the
+      caption the developer wrote; nothing else is read from or written to TikTok.
     </p>
 
     <h2>Contact</h2>
